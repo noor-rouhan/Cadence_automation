@@ -1,3 +1,10 @@
+;/**********************************\
+;> Inverter generation SKILL Script
+;> Version: 1.0
+;> Author: Rouhan Noor
+;> Data: 16.FEB.2020
+;\**********************************/
+
 procedure(
         Fet(finger_no, per_finger_width, cell_type, Coord)
 
