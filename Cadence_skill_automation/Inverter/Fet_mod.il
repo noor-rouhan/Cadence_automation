@@ -1,11 +1,3 @@
-;/**********************************\
-;> Inverter generation SKILL Script
-;> Version: 1.0
-;> Author: Rouhan Noor
-;> Data: 16.FEB.2020
-;\**********************************/
-
-;function for generating NMOS and PMOS
 procedure(
         Fet(finger_no, per_finger_width, cell_type, Coord)
 
@@ -104,7 +96,7 @@ for(i 0 finger_no-1
 abs(oxide_llx- oxide_ulx)
 );procedure 
 
-;function for generating inverter
+
 procedure(
 
 	inverter(inv_finger_no, pmos_finger_width, nmos_finger_width, inv_coord)
@@ -186,6 +178,14 @@ via_srt_lly = inv_lly - sep_pmos_nmos/2 - .12
 via_srt_ulx = inv_llx + .12*inv_finger_no + sep_poly_cont*(2*inv_finger_no + 1)+ min_poly_width*(inv_finger_no-1)
 via_srt_uly = via_srt_lly + .24
 dbCreateRect(cvID list("Metal1" "drawing") list(via_srt_llx:via_srt_lly via_srt_ulx:via_srt_uly))
+dbCreateRect(cvID list("Poly" "drawing") list(via_srt_llx:via_srt_lly via_srt_ulx:via_srt_uly))
+
+;creating and expanding nwell region
+nwell_llx = inv_llx - .01 
+nwell_uly = nwell_llx + oxide_length + sep_pimp_oxide*2 + nwell_llx + .01
+nwell_lly = inv_lly - sep_pmos_nmos/2
+nwell_uly = inv_lly + sep_pimp_oxide*2 + pmos_finger_width
+dbCreateRect(cvID list("Nwell" "drawing") list(nwell_llx:nwell_lly nwell_ulx:nwell_uly))
 
 ;sorting
 if(mod(inv_finger_no,2)==0 then
@@ -216,6 +216,9 @@ for(i 0 srs_vdd_connect
 		
                
 )
+
+
+
 );procedure
 
 
