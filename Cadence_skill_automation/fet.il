@@ -1,3 +1,5 @@
+; Author : Grabbed from Cadence forum 
+
 ;
 ;  This pcell demonstrates the use of sub-rectangles and offset subpaths
 ;  in the multipart path transistor implementation.  The name of the master

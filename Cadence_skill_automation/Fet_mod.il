@@ -1,3 +1,11 @@
+;/**********************************\
+;> Inverter generation SKILL Script
+;> Version: 1.0
+;> Author: Rouhan Noor
+;> Data: 16.FEB.2020
+;\**********************************/
+
+;function for generating NMOS and PMOS
 procedure(
         Fet(finger_no, per_finger_width, cell_type, Coord)
 
@@ -96,7 +104,7 @@ for(i 0 finger_no-1
 abs(oxide_llx- oxide_ulx)
 );procedure 
 
-
+;function for generating inverter
 procedure(
 
 	inverter(inv_finger_no, pmos_finger_width, nmos_finger_width, inv_coord)
