@@ -219,13 +219,9 @@ for(i 0 srs_vdd_connect
 			if((metal_vdd_llx < (inv_llx+oxide_length+sep_pimp_oxide*2)) then 
 			dbCreateRect(cvID list("Metal1" "drawing") list(metal_vdd_llx:inv_lly metal_vdd_ulx:(inv_lly+sep_pimp_oxide)))
 			dbCreateRect(cvID list("Metal1" "drawing") list(metal_vdd_llx:inv_lly-sep_pmos_nmos metal_vdd_ulx:inv_lly-sep_pimp_oxide-sep_pmos_nmos-.01))
-       		))
-		
-               
+       		))	
+			                 
 )
-
-
-
 );procedure
 
 
